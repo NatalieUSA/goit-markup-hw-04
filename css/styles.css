@@ -16,12 +16,14 @@
 
   --main-bcg-cl: #ffffff;
   --secondary-bcg-cl: #f5f4fa;
-  --hero-bcg-cl: #2f303a;
+  --footer-bcg-cl: #2f303a;
+  --hero-bcg-cl: #c4c4c4;
   --accent-bcg-cl: #2196f3;
   --btn-hover-cl: #188ce8;
+  --hero-overlay-cl: rgba(47, 48, 58, 0.4);
 
   --header-border-cl: #ececec;
-  --card-border: #EEEEEE;
+  --card-border: #eeeeee;
   --border-radius-button: 4px;
   --border-radius-cards: 0px 0px 4px 4px;
   --box-shadow-button: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -95,9 +97,8 @@ HEADER^^^^^^^ */
 .auth-nav {
   display: flex;
   gap: 50px;
-  padding: 32px 0; 
+  padding: 32px 0;
 }
-
 
 /* LOGO */
 .logo {
@@ -149,14 +150,27 @@ HEADER^^^^^^^ */
 }
 
 /* HERO */
-.hero,
-.footer {
-  background-color: var(--hero-bcg-cl);
-}
+
 .hero {
+  background-color: var(--hero-bcg-cl);
+
   text-align: center;
   padding: 200px 0;
+
+  max-width: 1600px;
+  height: 600px;
+  margin: 0 auto;
+  background-image: linear-gradient(
+      to right,
+      var(--hero-overlay-cl),
+      var(--hero-overlay-cl)
+    ),
+    url(../images/hero/Img.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 .hero-title {
   color: var(--hero-txt-cl);
   font-weight: 900;
@@ -367,6 +381,7 @@ HEADER^^^^^^^ */
 
 /* FOOTER */
 .footer {
+  background-color: var(--footer-bcg-cl);
   padding: 60px 0;
 }
 
