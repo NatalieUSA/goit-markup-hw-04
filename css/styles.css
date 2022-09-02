@@ -32,6 +32,7 @@
   --box-shadow-cards: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 
+  --icon-cl: #afb1b8;
   /*  */
   --items: 3;
   --indent: 30px;
@@ -145,6 +146,16 @@ HEADER^^^^^^^ */
   letter-spacing: 0.02em;
 }
 
+.auth-nav .link {
+  display: flex;
+  gap: 10px;
+  fill: var(--main-txt-cl);
+}
+.auth-nav .link:hover .icon,
+.auth-nav .link:focus .icon {
+  fill: var(--accent-bcg-cl);
+}
+
 .nav-bcg {
   background-color: var(--hero-text-color);
 }
@@ -211,6 +222,34 @@ HEADER^^^^^^^ */
 }
 
 /* FEATURES Преимущества*/
+.feature-item::before {
+  display: block;
+  content: "";
+  height: 140px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--secondary-bcg-cl);
+
+  margin-bottom: 30px;
+  background-size: 70px;
+  
+}
+
+.feature-item-antenna::before {
+  background-image: url(../images/icon/feature-icon/antenna.svg);
+  /* fill: black; */
+}
+.feature-item-clock::before {
+  background-image: url(./images/icons.svg#icon-twitter);
+}
+.feature-item-diagram::before {
+  background-image: url(../images/feature-icon/diagram\ 1.svg);
+}
+.feature-item-astronaut::before {
+  background-image: url(../images/feature-icon/astronaut\ 1.svg);
+}
+
 .features .item-title {
   color: var(--title-txt-cl);
   font-weight: 700;
@@ -278,6 +317,9 @@ HEADER^^^^^^^ */
 .team {
   background-color: var(--secondary-bcg-cl);
 }
+.socials-link {
+  text-decoration: none;
+}
 
 .team-list {
   display: flex;
@@ -304,11 +346,43 @@ HEADER^^^^^^^ */
   font-size: 16px;
   line-height: calc(19 / 16);
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
 .team-text {
   padding: 30px 0;
+}
+
+/*Socials */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--main-bcg-cl);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.socials-icon {
+  fill: var(--icon-cl);
+}
+
+.socials-link:hover,
+.socials-link:focus {
+ background-color: var(--btn-hover-cl);
+}
+
+.socials-link:hover .socials-icon,
+.socials-link:focus .socials-icon {
+  fill: var(--btn-txt-cl);
 }
 
 /* GALLERY - page Portfolio */
