@@ -102,6 +102,9 @@ HEADER^^^^^^^ */
 .auth-nav {
   display: flex;
   gap: 50px;
+}
+.site-nav .link,
+.auth-nav .link {
   padding: 32px 0;
 }
 
@@ -152,7 +155,7 @@ HEADER^^^^^^^ */
 
 .auth-nav .link {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
   gap: 10px;
   fill: var(--main-txt-cl);
@@ -232,7 +235,7 @@ HEADER^^^^^^^ */
 .feature-rectangle {
   display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   width: 270px;
   height: 120px;
   background-color: var(--secondary-bcg-cl);
@@ -375,31 +378,32 @@ HEADER^^^^^^^ */
   fill: var(--btn-txt-cl);
 }
 /*  CLIENTS */
+
 .clients-list {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 30px; 
+  /* flex-basis: calc((100% - 5 * 30px) / 6); */
+  /* flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items)); */
 }
 
 .clients-item {
   display: flex;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   align-items: center;
   justify-content: center;
   width: 170px;
   height: 92px;
   background-color: var(--main-bcg-cl);
-  padding: 16px 32px;
   border: 1px solid var(--icon-cl);
   border-radius: var(--border-radius-button);
-
-  cursor: pointer;
+  color: 1px solid var(--icon-cl);
 }
+
 
 .clients-icon {
-  fill: var(--icon-cl);
+  fill: currentColor;
 }
-
 .clients-item:hover,
 .clients-item:focus {
   border-color: var(--btn-hover-cl);
@@ -471,6 +475,7 @@ HEADER^^^^^^^ */
 .gallery-item {
   flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
   cursor: pointer;
+  display: block;
 }
 .gallery-item:hover,
 .gallery-item:focus {
@@ -487,6 +492,7 @@ HEADER^^^^^^^ */
 /* FOOTER */
 .footer {
   background-color: var(--footer-bcg-cl);
+  padding: 60px 0;
 }
 
 .logo-footer {
@@ -534,27 +540,24 @@ HEADER^^^^^^^ */
 
 .contacts {
   margin-right: 70px;
-  padding: 60px 0;
-}
-
-.join {
-  padding-top: 72px;
 }
 
 .join-title {
+  display: flex;
   color: var(--hero-txt-cl);
   font-weight: 700;
   font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  padding-top: 12px;
+  padding-bottom: 20px;
 
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 .join-list {
   display: flex;
-  justify-content: left;
   gap: 10px;
 }
 
@@ -569,13 +572,13 @@ HEADER^^^^^^^ */
   cursor: pointer;
 }
 .join-icon {
-  fill: var(--btn-txt-cl);
+  fill: var(--btn-txt-cl); 
 }
 
 .join-item:hover,
 .join-item:focus {
   background-color: var(--btn-hover-cl);
 }
-.footer-container {
+/* .footer-container {
   align-items: flex-start;
-}
+} */
