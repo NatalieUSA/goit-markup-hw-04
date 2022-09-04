@@ -152,6 +152,8 @@ HEADER^^^^^^^ */
 
 .auth-nav .link {
   display: flex;
+  justify-content: center; 
+  align-items: center;
   gap: 10px;
   fill: var(--main-txt-cl);
 }
