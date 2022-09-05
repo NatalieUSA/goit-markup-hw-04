@@ -359,35 +359,36 @@ HEADER^^^^^^^ */
   justify-content: center;
   width: 44px;
   height: 44px;
+
   background-color: var(--main-bcg-cl);
   border-radius: 50%;
   cursor: pointer;
-}
-
-.socials-icon {
-  fill: var(--icon-cl);
 }
 
 .socials-link:hover,
 .socials-link:focus {
   background-color: var(--btn-hover-cl);
 }
-
 .socials-link:hover .socials-icon,
 .socials-link:focus .socials-icon {
   fill: var(--btn-txt-cl);
 }
-/*  CLIENTS */
+.socials-icon {
+  fill: var(--icon-cl);
+}
 
+/*  CLIENTS */
 .clients-list {
   display: flex;
   justify-content: center;
-  gap: 30px; 
+  gap: 30px;
+
   /* flex-basis: calc((100% - 5 * 30px) / 6); */
   /* flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items)); */
 }
 
-.clients-item {
+
+.clients-link {
   display: flex;
   box-sizing: border-box;
   align-items: center;
@@ -397,20 +398,19 @@ HEADER^^^^^^^ */
   background-color: var(--main-bcg-cl);
   border: 1px solid var(--icon-cl);
   border-radius: var(--border-radius-button);
-  color: 1px solid var(--icon-cl);
+  fill: var(--icon-cl);
 }
-
-
 .clients-icon {
-  fill: currentColor;
+  color: currentColor;
 }
-.clients-item:hover,
-.clients-item:focus {
+
+.clients-link:hover,
+.clients-link:focus {
   border-color: var(--btn-hover-cl);
 }
 
-.clients-item:hover .clients-icon,
-.clients-item:focus .clients-icon {
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
   fill: var(--accent-bcg-cl);
 }
 
@@ -536,6 +536,7 @@ HEADER^^^^^^^ */
 
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 
 .contacts {
@@ -550,8 +551,7 @@ HEADER^^^^^^^ */
   line-height: calc(16 / 14);
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  padding-top: 12px;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 
   /* margin-bottom: 20px; */
 }
@@ -561,7 +561,7 @@ HEADER^^^^^^^ */
   gap: 10px;
 }
 
-.join-item {
+.join-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -572,13 +572,10 @@ HEADER^^^^^^^ */
   cursor: pointer;
 }
 .join-icon {
-  fill: var(--btn-txt-cl); 
+  fill: var(--btn-txt-cl);
 }
 
-.join-item:hover,
-.join-item:focus {
+.join-link:hover,
+.join-link:focus {
   background-color: var(--btn-hover-cl);
 }
-/* .footer-container {
-  align-items: flex-start;
-} */
