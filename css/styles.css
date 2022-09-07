@@ -127,6 +127,7 @@ HEADER^^^^^^^ */
 
 /* SITE-NAVIGATION */
 .site-nav .link {
+  display: block;
   color: var(--title-txt-cl);
   font-weight: 500;
   font-size: 14px;
@@ -145,6 +146,7 @@ HEADER^^^^^^^ */
 }
 
 .auth-nav .link {
+  display: block;
   color: var(--main-txt-cl);
   text-decoration: none;
   font-size: 14px;
@@ -278,7 +280,8 @@ HEADER^^^^^^^ */
 
 .feature-item {
   width: calc((100% - 90px) / 4);
-  /* flex-basis: calc((100 - 3 * 30) / 4);  */
+  /* flex-basis: calc((100 - 3 * 30) / 4);
+  .feature-item {flex-basis: calc((100% - 3 * 30px) / 4);    */
   margin-right: 30px;
 }
 
@@ -381,12 +384,15 @@ HEADER^^^^^^^ */
 .clients-list {
   display: flex;
   justify-content: center;
-  gap: 30px;
-
-  /* flex-basis: calc((100% - 5 * 30px) / 6); */
-  /* flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items)); */
+  gap: 30px; 
 }
 
+/* .clients-item {
+  flex-basis: calc((100% - 5 * 30px) / 6);
+} */
+
+/* flex-basis: calc((100% - 5 * 30px) / 6); */
+/* flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items)); */
 
 .clients-link {
   display: flex;
